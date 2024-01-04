@@ -6,16 +6,6 @@ const details = {
         amount: "321.99",
         type: "debit",
       },
-      {
-        title: "Market charge",
-        amount: "1000.00",
-        type: "debit",
-      },
-      {
-        title: "Transfer",
-        amount: "340.00",
-        type: "debit",
-      },
     ],
     "Jan 04, 2024": [
       {

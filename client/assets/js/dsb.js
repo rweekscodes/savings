@@ -1,21 +1,24 @@
 "use strict";
+
 import details from "./details.js";
 let accounts = [...document.querySelectorAll(".acc")];
+let allHistoryDOM = [...document.querySelectorAll(".hs")];
+
+function clearAllHistoryDOM() {
+  allHistoryDOM.forEach((h) => (h.innerHTML = ""));
+}
 
 accounts.forEach((account) => {
-  console.log(account.classList);
   account.onclick = ({ target }) => {
     let type = target.id;
     let historyDOM = target.children[1].children[1];
 
-    accounts.forEach((f) => f.classList.remove("open"));
-
-    if (target.classList.contains("open")) {
+    if (target.classList.value.includes("open")) {
       target.classList.remove("open");
-      historyDOM.innerHTML = "";
       return;
     }
 
+    accounts.forEach((f) => f.classList.remove("open"));
     target.classList.add("open");
     openAccount(target, type, historyDOM);
   };
@@ -26,6 +29,8 @@ function openAccount(target, x, historyDOM) {
   const transStatusDate = Object.keys(account);
   const transDetails = Object.values(account);
 
+  clearAllHistoryDOM();
+
   transStatusDate.forEach((d) => {
     historyDOM.innerHTML += `
     <div class="t-sec">
@@ -35,12 +40,14 @@ function openAccount(target, x, historyDOM) {
   });
 
   transDetails.forEach((d, i) => {
-    let allF = [...document.querySelectorAll(".t-group")];
+    let allTransactionGroups = [...document.querySelectorAll(".t-group")];
     if (d.length === 0) {
-      allF[i].innerHTML += `<p class='pending'>No pending transactions</p>`;
+      allTransactionGroups[
+        i
+      ].innerHTML += `<p class='pending'>No pending transactions</p>`;
     }
     d.forEach((D) => {
-      allF[i].innerHTML += `
+      allTransactionGroups[i].innerHTML += `
         <div class="transaction">
           <p class="memo">${D.title}</p>
           <h1 class=${D.type === "debit" ? "debit" : "credit"} >
