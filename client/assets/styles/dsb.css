@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  scroll-behavior: smooth;
+  font-size: 14px;
+}
+
+html {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  margin-top: 0;
+  background-color: #1536be;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  position: relative;
+}
+
+.menu {
+  pointer-events: none;
+  opacity: 0;
+  visibility: none;
+  transform: translateX(-100%);
+}
+
+#menuButton svg {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+#menuButton {
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+}
+
+.lg {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+  justify-self: center;
+}
+
+.accounts-parent {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex-grow: 1;
+}
+
+.pg-head {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.acc {
+  width: 100%;
+  /* padding: 10px; */
+  border-radius: 5px;
+  /* box-shadow: 0px 1px 2px 2px rgba(128, 128, 128, 0.216); */
+  border: 1px solid rgba(128, 128, 128, 0.326);
+  background-color: white;
+  overflow: hidden;
+}
+
+.acc.open {
+  outline: 2px solid black;
+}
+
+.acc-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.acc-head {
+  padding: 10px;
+}
+
+.acc-head h1 {
+  color: #1536be;
+  font-weight: 700 !important;
+}
+
+.acc h1 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.numbs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.current {
+  color: #01875f;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.title {
+  display: inline;
+  font-size: 14px;
+}
+
+.dots {
+  border: none;
+  border-top: 2px dotted rgba(128, 128, 128, 0.429);
+  width: 90%;
+  transform: translateY(-4px);
+}
+
+.am {
+  padding: 0px 0px 0px 5px;
+}
+
+.cm {
+  padding: 0px 5px 0px 0px;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background-color: #1536be;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ft-logo {
+  display: inline !important;
+  margin: 0;
+  width: 100px;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.sc {
+  outline: 1px solid #a1afe5;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+}
+
+.sc img {
+  width: 16px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.f-dets {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fdp {
+  text-decoration: 1.5px underline;
+  margin: 0;
+}
+
+footer {
+  color: white;
+  margin: 40px 0px 0px 0px;
+  padding-top: 30px;
+}
+
+.stamps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid white;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.no {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.stamps img {
+  object-fit: contain;
+}
+
+.term {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.last {
+  text-align: center;
+}
+
+.term h2 {
+  font-size: 16px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 10px;
+}
+
+.t-sec h2 {
+  text-align: center;
+}
+
+.t-group {
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1px;
+}
+
+.transaction h1 {
+  margin: 0 !important;
+}
+
+.hd {
+  padding: 10px;
+}
+
+.status {
+  background-color: #ededed;
+  padding: 10px;
+}
+
+.credit {
+  color: green;
+}
+
+.debit {
+  color: black;
+}
+
+.pending {
+  text-align: center;
+}
+
+button {
+  text-align: start;
+}
+
+button * {
+  pointer-events: none;
+}
+
+.open.history {
+  background-color: green !important;
+}
+
+.open .history {
+  display: block;
+}
+
+.history {
+  display: none;
+}
+
+.welcome {
+  color: grey;
+  font-size: 24px;
+}
+
+.y {
+  color: rgb(234, 152, 10);
+  font-size: 24px;
+  display: inline-block;
+}
