@@ -1,6 +1,20 @@
 "use strict";
 
 import details from "./details.js";
+
+let menuBtn = document.getElementById("menuButton");
+const menu = document.querySelector(".menu");
+const closeBtn = document.querySelector(".close");
+menuBtn.onclick = () => {
+  menu.classList.add("open-menu");
+  menu.classList.remove("close-menu");
+};
+
+closeBtn.onclick = () => {
+  menu.classList.add("close-menu");
+  menu.classList.remove("open-menu");
+};
+
 let accounts = [...document.querySelectorAll(".acc")];
 let allHistoryDOM = [...document.querySelectorAll(".hs")];
 

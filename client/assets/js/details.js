@@ -49,26 +49,6 @@ const details = {
     "Jan 02, 2024": [
       {
         title: "Transfer",
-        amount: "560.00",
-        type: "credit",
-      },
-      {
-        title: "Transfer",
-        amount: "450.50",
-        type: "credit",
-      },
-      {
-        title: "Transfer",
-        amount: "100.00",
-        type: "credit",
-      },
-      {
-        title: "Transfer",
-        amount: "560.00",
-        type: "credit",
-      },
-      {
-        title: "Transfer",
         amount: "450.50",
         type: "credit",
       },
