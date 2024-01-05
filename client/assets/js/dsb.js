@@ -22,21 +22,21 @@ function clearAllHistoryDOM() {
   allHistoryDOM.forEach((h) => (h.innerHTML = ""));
 }
 
-accounts.forEach((account) => {
-  // Options for the observer (which mutations to observe)
-  var config = { childList: true, subtree: true };
+// Options for the observer (which mutations to observe)
+var config = { childList: true, subtree: true };
 
-  // Callback function to execute when mutations are observed
-  var callback = function (mutationsList, observer) {
-    for (var mutation of mutationsList) {
-      if (mutation.type === "childList") {
-        console.log("Content of the container changed!");
-        account.style.height = `${account.scrollHeight}px`;
-        // Do something when content changes
-      }
+// Callback function to execute when mutations are observed
+var callback = function (mutationsList, observer) {
+  for (var mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      console.log("Content of the container changed!");
+      account.style.height = `${account.scrollHeight}px`;
+      // Do something when content changes
     }
-  };
+  }
+};
 
+accounts.forEach((account) => {
   // Create an observer instance linked to the callback function
   var observer = new MutationObserver(callback);
 
