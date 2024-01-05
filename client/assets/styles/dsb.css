@@ -169,12 +169,11 @@ nav {
   border: 1px solid rgba(128, 128, 128, 0.326);
   background-color: white;
   overflow: hidden;
-  transition: height 0.1s linear;
-  height: 110px;
+  transition: height 0.2s linear;
 }
 
 .acc.open {
-  /* outline: 2px solid black; */
+  outline: 2px solid black;
 }
 
 .acc-container {
@@ -391,8 +390,8 @@ button * {
 
 .open .history {
   display: block;
-  animation: fade 0.2s ease-in-out forwards;
-  animation-delay: 0.2s;
+  animation: fade 0.3s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 .history {
