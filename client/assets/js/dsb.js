@@ -38,6 +38,36 @@ accounts.forEach((account) => {
   };
 });
 
+// total costs
+let n = [];
+function totalCost(transDetails) {
+  let b = [];
+
+  transDetails = Object.values(transDetails);
+
+  b.push(transDetails);
+  n.push(Array(b[0]));
+
+  b.forEach((F) => {
+    b = [];
+    F.forEach((f) => {
+      f.map((c) => b.push(Number(c.amount)));
+    });
+  });
+
+  b = b.reduce((a, b) => a + b + 0);
+
+  return b;
+}
+
+let pricesDOMs = [...document.querySelectorAll(".am")];
+
+let Details = Object.values(details);
+
+Details = Details.map((M, i) => {
+  pricesDOMs[i].textContent = totalCost(M);
+});
+
 function openAccount(target, x, historyDOM) {
   const account = details[x];
   const transStatusDate = Object.keys(account);
@@ -48,7 +78,6 @@ function openAccount(target, x, historyDOM) {
   transStatusDate.forEach((d) => {
     historyDOM.innerHTML += `
     <div class="t-sec">
-		<h2 class="status">${d}</h2>
         <div class="t-group"></div>
 	</div>`;
   });
@@ -63,10 +92,14 @@ function openAccount(target, x, historyDOM) {
     d.forEach((D) => {
       allTransactionGroups[i].innerHTML += `
         <div class="transaction">
-          <p class="memo">${D.title}</p>
-          <h1 class=${D.type === "debit" ? "debit" : "credit"} >
+          <p class="memo">${
+            D.title
+          } <span class='transid'>TransactionID : bgr_inv9272616726</span></p>
+          <h1 class=${D.type === "Profit" ? "Profit" : "Deposit"} >
           ${D.type === "debit" ? "-" : "+"}$${D.amount}</h1>
         </div>`;
     });
   });
 }
+
+// const allItemsAmount = details.

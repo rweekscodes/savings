@@ -1,61 +1,65 @@
 const details = {
   Checking: {
-    pending: [
-      {
-        title: "DEPT maintenance feedback",
-        amount: "321.99",
-        type: "debit",
-      },
-    ],
+    pending: [],
     "Jan 04, 2024": [
       {
-        title: "Transfer",
-        amount: "3000.35",
-        type: "credit",
+        title: "bangor-invest profit",
+        amount: "679.69",
+        type: "Profit",
       },
       {
-        title: "Transfer",
-        amount: "3000.80",
-        type: "credit",
+        title: "bangor-invest profit",
+        amount: "489.85",
+        type: "Profit",
       },
       {
-        title: "Transfer",
+        title: "bangor-invest profit",
+        amount: "625.00",
+        type: "Profit",
+      },
+      {
+        title: "bangor-invest profit",
+        amount: "2856.00",
+        type: "Profit",
+      },
+      {
+        title: "bangor-invest profit",
         amount: "3000.00",
-        type: "credit",
+        type: "Profit",
       },
     ],
     "Jan 03, 2024": [
       {
-        title: "Transfer",
-        amount: "250.33",
-        type: "credit",
+        title: "Bangor-Investment deposit",
+        amount: "250.00",
+        type: "Deposit",
       },
       {
-        title: "Transfer",
-        amount: "300.80",
-        type: "credit",
+        title: "Bangor-Investment deposit",
+        amount: "400.00",
+        type: "Deposit",
       },
       {
-        title: "Transfer",
-        amount: "102.80",
-        type: "credit",
+        title: "Bangor-Investment deposit",
+        amount: "300.00",
+        type: "Deposit",
       },
       {
-        title: "Transfer",
-        amount: "300.80",
-        type: "credit",
+        title: "Bangor-Investment deposit",
+        amount: "300.00",
+        type: "Deposit",
       },
     ],
     "Jan 02, 2024": [
       {
-        title: "Transfer",
-        amount: "450.50",
-        type: "credit",
+        title: "Bangor-Investment deposit",
+        amount: "300.50",
+        type: "Deposit",
       },
       {
-        title: "Transfer",
+        title: "Bangor-Investment deposit",
         amount: "100.00",
-        type: "credit",
+        type: "Deposit",
       },
     ],
   },

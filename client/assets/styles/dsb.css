@@ -166,14 +166,14 @@ nav {
   /* padding: 10px; */
   border-radius: 5px;
   /* box-shadow: 0px 1px 2px 2px rgba(128, 128, 128, 0.216); */
-  border: 1px solid rgba(128, 128, 128, 0.326);
+  border: 2px solid rgba(128, 128, 128, 0.326);
   background-color: white;
   overflow: hidden;
   transition: height 0.2s linear;
 }
 
 .acc.open {
-  outline: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .acc-container {
@@ -359,12 +359,27 @@ footer * {
   color: green;
 }
 
-.debit {
-  color: black;
+.Profit {
+  color: #1536be;
+}
+
+.Deposit {
+  color: #01875f;
+}
+
+.memo {
+  text-transform: uppercase;
+}
+
+.transid {
+  font-size: 12px !important;
+  text-transform: lowercase;
+  color: grey;
 }
 
 .pending {
   text-align: center;
+  padding: 10px;
 }
 
 button {
