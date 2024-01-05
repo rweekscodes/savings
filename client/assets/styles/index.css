@@ -21,6 +21,7 @@
 html {
   min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ededed;
+  overflow: hidden;
 
   /* background-color: #039e4b21; */
   /* background-color: #3f413727; */
@@ -52,7 +54,8 @@ body {
 }
 
 .logo {
-  width: 300px;
+  width: 150px;
+  margin: 20px 5px;
 }
 
 .form-field {
@@ -84,15 +87,15 @@ input {
 }
 
 input:focus {
-  box-shadow: 0px 0px 5px 2px #8281db;
+  box-shadow: 0px 0px 5px 2px #1537be93;
   outline: none;
-  border-color: #8281db;
+  border-color: #1536be;
 }
 
 button {
   padding: 0.5rem 1rem;
   color: white;
-  background-color: #8281db;
+  background-color: #1536be;
   border: none;
   border-radius: 3px;
 }
@@ -120,4 +123,43 @@ li {
 
 .mm {
   max-width: auto;
+}
+
+.error {
+  color: rgb(230, 8, 8);
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 500px;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+
+  .form-field {
+    width: 50%;
+    margin-top: 0;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  .img {
+    width: 50%;
+    object-fit: cover !important;
+    height: 100%;
+  }
+
+  .logo {
+    width: 150px;
+  }
 }

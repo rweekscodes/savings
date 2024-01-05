@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bangor Savings Bank</title>
 	<link rel="stylesheet"  href="./styles/index.css" />
+  <script src="/assets/js/index.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <img src="/assets/img/gj.jpg" class="img" alt="" />
+      <img src="/assets/img/back.png" class="img" alt="" />
       <div class="form-field">
-        <img class="logo" src=""></img>
+        <img class="logo" src="assets/img/logo.png"></img>
         <form action="">
           <label for="username">Username
-            <input type="text">
+            <input type="text" name="username">
           </label>
           <label for="password">Password
-            <input type="password" name="" id="" placeholder="">
+            <input type="password" name="password" id="" placeholder="">
           </label>
-          <button type="submit">Login</button>
+          <div class="error"></div>
+          <button type="submit" class="submit">Login</button>
         </form>
         <ul class="options">
           <li>Sign up</li>
