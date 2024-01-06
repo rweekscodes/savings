@@ -2,6 +2,13 @@
 
 import details from "./details.js";
 
+window.onload = () => {
+  const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+  if (!isLoggedIn) {
+    window.location = "/";
+  }
+};
+
 let menuBtn = document.getElementById("menuButton");
 const menu = document.querySelector(".menu");
 const closeBtn = document.querySelector(".close");
@@ -56,21 +63,26 @@ console.log(o);
 let accContainer = document.querySelector(".acc-container");
 let accountDOM = "";
 
+function formatNumberWithCommas(inputNumber) {
+  return inputNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 accountTypes.forEach((a, i) => {
+  var formattedNumber = formatNumberWithCommas(o[i].toString());
   accContainer.innerHTML += `
 <button id=${a} class="acc">
 		<div class="acc-head">
-			<h1>${a} **1123</h1>
+			<h1>Checking Account **5114</h1>
 			<div
 				class="numbs">
 				<p class="cm title">Current</p>
 				<div class="dots"></div>
-				<p class="am current">${o[i]}</p>
+				<p class="am current">$${formattedNumber}</p>
 			</div>
 			<div class="numbs">
 				<p class="cm title">Available</p>
 				<div class="dots"></div>
-				<p class="am available">${o[i]}</p>
+				<p class="am available">$${formattedNumber}</p>
 			</div>
 
 		</div>
@@ -107,6 +119,12 @@ accounts.forEach((account) => {
 
 // Accounts
 
+function generateTransactionID() {
+  return parseInt(Math.random(1) * 9999999);
+}
+
+generateTransactionID();
+
 function openAccount(target, x, historyDOM) {
   const account = details[x];
   const transStatusDate = Object.keys(account);
@@ -129,16 +147,25 @@ function openAccount(target, x, historyDOM) {
       ].innerHTML += `<p class='pending'>No pending transactions</p>`;
     }
     d.forEach((D) => {
+      var formattedNumber = formatNumberWithCommas(D.amount.toString());
       allTransactionGroups[i].innerHTML += `
         <div class="transaction">
           <p class="memo">${
             D.title
-          } <span class='transid'>TransactionID : bgr_inv9272616726</span></p>
+          } <span class='transid'>TrxID : bgr_inv${generateTransactionID()}</span></p>
           <h1 class=${D.type === "Profit" ? "Profit" : "Deposit"} >
-          ${D.type === "debit" ? "-" : "+"}$${D.amount}</h1>
+          ${D.type === "debit" ? "-" : "+"}$${formattedNumber}</h1>
         </div>`;
     });
   });
 }
+
+// Notice
+
+setTimeout(() => (notice.style.display = "flex"), 3000);
+
+const notice = document.querySelector(".stop");
+const closeNoticeBtn = document.querySelector(".close_notice");
+closeNoticeBtn.onclick = () => (notice.style.display = "none");
 
 // const allItemsAmount = details.

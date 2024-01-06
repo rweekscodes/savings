@@ -77,7 +77,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1536be;
+  background-color: transparent;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -329,6 +329,13 @@ footer * {
   justify-content: space-between;
   background-color: white;
   padding: 10px 10px;
+  column-gap: 20px;
+}
+
+.memo {
+  width: 70%;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .t-sec h2 {
@@ -369,12 +376,14 @@ footer * {
 
 .memo {
   text-transform: uppercase;
+  font-size: 20px;
 }
 
 .transid {
   font-size: 12px !important;
   text-transform: lowercase;
   color: grey;
+  display: block;
 }
 
 .pending {
@@ -423,4 +432,51 @@ button * {
   color: rgb(234, 152, 10);
   font-size: 24px;
   display: inline-block;
+}
+
+.stop {
+  display: none;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  padding: 15px 20px 20px 20px;
+  border-radius: 5px;
+  background-color: #ff000016;
+  position: relative;
+}
+
+.close_notice {
+  background-color: transparent;
+  color: #ff0000;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  justify-self: flex-end;
+  position: absolute;
+  right: 20px;
+  /* padding: 10px 15px; */
+}
+
+.close-btn {
+  width: 20px !important;
+}
+
+.h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-con {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.stop img {
+  width: 40px;
 }

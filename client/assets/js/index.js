@@ -12,6 +12,7 @@ form.addEventListener("submit", (e) => {
   setTimeout(() => {
     if (username === "shellie_banking" && password === "@bANkInG%$") {
       window.location = "/dashboard";
+      sessionStorage.setItem("isLoggedIn", true);
     } else {
       errorMsg.innerText =
         "Your inputed username and password is incorrect. please double check and try again";
